@@ -2,7 +2,7 @@
 
 This module cover the following topics:
 
-1. Find the Python version
+1. Checking the Installed Python Version
 2. Understand and set a shebang line
 3. Write first python script
 4. Understand basic variable types
