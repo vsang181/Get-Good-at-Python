@@ -2,7 +2,7 @@
 
 This module cover the following topics:
 
-- Variables, Slicing and Type Casting
+- [Variables, Slicing and Type Casting](https://github.com/vsang181/Get-Good-at-Python/tree/main/Python%20Scripting%20Basics/Variables%2C%20Slicing%20and%20Type%20Casting)
 - Lists and Dictionaries
 - Loops, Logic and User Input
 - Files and Funcations
