@@ -1,4 +1,4 @@
-n this module, we will cover the following topics:
+In this module, we will cover the following topics:
 
 1. [Python Lists](https://github.com/vsang181/Get-Good-at-Python/blob/main/Python%20Scripting%20Basics/Lists%20and%20Dictionaries/Python%20Lists.md)
 2. [Python Dictionaries](https://github.com/vsang181/Get-Good-at-Python/blob/main/Python%20Scripting%20Basics/Lists%20and%20Dictionaries/Python%20Dictionaries.md)
