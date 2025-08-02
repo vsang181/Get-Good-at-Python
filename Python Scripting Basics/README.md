@@ -4,7 +4,7 @@ This module cover the following topics:
 
 - [Variables, Slicing and Type Casting](https://github.com/vsang181/Get-Good-at-Python/tree/main/Python%20Scripting%20Basics/Variables%2C%20Slicing%20and%20Type%20Casting)
 - [Lists and Dictionaries](https://github.com/vsang181/Get-Good-at-Python/tree/main/Python%20Scripting%20Basics/Lists%20and%20Dictionaries)
-- Loops, Logic and User Input
+- [Loops, Logic and User Input](https://github.com/vsang181/Get-Good-at-Python/tree/main/Python%20Scripting%20Basics/Loops%2C%20Logic%20and%20User%20Input)
 - Files and Funcations
 - Modules and Web Requests
 - Python Network Sockets
