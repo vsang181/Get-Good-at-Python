@@ -125,7 +125,7 @@ While we have fixed the type error using `int()`, users may still enter invalid 
 Would you please provide me your name: Victor
 May I ask how old are you: twenty five
 Traceback (most recent call last):
-  File "/Users/victorsangwan/./slicing.py", line 4, in <module>
+  File "/Users/victorsangwan/./userInput_2.py", line 4, in <module>
     y= int(input("May I ask how old are you: "))
 ```
 
