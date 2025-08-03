@@ -6,7 +6,7 @@ This module cover the following topics:
 - [Lists and Dictionaries](https://github.com/vsang181/Get-Good-at-Python/tree/main/Python%20Scripting%20Basics/Lists%20and%20Dictionaries)
 - [Loops, Logic and User Input](https://github.com/vsang181/Get-Good-at-Python/tree/main/Python%20Scripting%20Basics/Loops%2C%20Logic%20and%20User%20Input)
 - [Files and Functions](https://github.com/vsang181/Get-Good-at-Python/tree/main/Python%20Scripting%20Basics/Files%20and%20Functions)
-- Modules and Web Requests
+- [Modules and Web Requests](https://github.com/vsang181/Get-Good-at-Python/tree/main/Python%20Scripting%20Basics/Modules%20and%20Web%20Requests)
 - Python Network Sockets
 - Create a Web Spider
 
