@@ -2,7 +2,7 @@
 
 In this module, we will cover the following topics:
 
-1. Working with Files
+1. [Working with Files](https://github.com/vsang181/Get-Good-at-Python/blob/main/Python%20Scripting%20Basics/Files%20and%20Funcations/Working%20with%20Files.md)
 2. Python Funcations
 3. Combining File Operations in a Funcation
 
