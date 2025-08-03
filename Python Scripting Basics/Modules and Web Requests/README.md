@@ -2,7 +2,7 @@
 
 In this module, we will cover the following topics:
 
-1. Importing a Module
+1. [Importing a Module](https://github.com/vsang181/Get-Good-at-Python/blob/main/Python%20Scripting%20Basics/Modules%20and%20Web%20Requests/Importing%20a%20Module.md)
 2. Making Web Requests
 
 So far, we have covered various foundational concepts required to build Python programs. One of the key strengths of Python is its extensive library of built-in modules, which make powerful tasks easy to implement with just a few lines of code.
