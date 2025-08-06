@@ -7,7 +7,7 @@ This module cover the following topics:
 - [Loops, Logic and User Input](https://github.com/vsang181/Get-Good-at-Python/tree/main/Python%20Scripting%20Basics/Loops%2C%20Logic%20and%20User%20Input)
 - [Files and Functions](https://github.com/vsang181/Get-Good-at-Python/tree/main/Python%20Scripting%20Basics/Files%20and%20Functions)
 - [Modules and Web Requests](https://github.com/vsang181/Get-Good-at-Python/tree/main/Python%20Scripting%20Basics/Modules%20and%20Web%20Requests)
-- Python Network Sockets
+- [Python Network Sockets](https://github.com/vsang181/Get-Good-at-Python/tree/main/Python%20Scripting%20Basics/Python%20Network%20Sockets)
 - Create a Web Spider
 
 Scripting refers to the practice of writing short programmes—to efficiently automate repetitive or routine tasks. It is particularly valuable in large-scale environments where manual execution would be both time-consuming and prone to error. For instance, within an enterprise network, administrators may be required to apply configuration changes, deploy software updates, or retrieve logs across hundreds of machines. Performing these actions manually would not only be a laborious and inefficient use of time but could also introduce inconsistencies. Scripting enables these tasks to be executed rapidly, reliably, and with minimal human intervention, thereby improving operational efficiency and reducing the risk of error.
