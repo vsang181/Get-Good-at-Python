@@ -3,7 +3,7 @@
 In this module, we will cover the following topics:
 
 1. [Writing Programs in Pseudocode](https://github.com/vsang181/Get-Good-at-Python/blob/main/Python%20Scripting%20Basics/Putting%20It%20All%20Together/Writing%20Programs%20in%20Pseudocodemd)
-2. Creating a Program Flowchart
+2. [Creating a Program Flowchart](https://github.com/vsang181/Get-Good-at-Python/blob/main/Python%20Scripting%20Basics/Putting%20It%20All%20Together/Creating%20a%20Program%20Flowchart.md)
 3. Creating the Spider
 
 We will now create a program from scratch.
