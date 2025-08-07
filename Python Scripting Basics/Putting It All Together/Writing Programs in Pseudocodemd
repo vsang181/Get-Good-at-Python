@@ -1,0 +1,76 @@
+# Writing Programs in Pseudocode
+
+Before writing any program, it is important to have a clear idea of what you want the program to accomplish and how you plan to achieve that. Unfortunately, many programmers skip this step and jump directly into coding, believing that anything else is a waste of time. However, we are not going to adopt that mindset.
+
+Instead, we will take the time to organize our plan and write it out in plain language, rather than immediately using a programming language. This is called pseudocode. Time spent writing pseudocode will save you time and effort during development by clarifying your logic and reducing the likelihood of bugs.
+
+## Step 1: Define the Goal
+
+Let us begin by defining what our script is supposed to do:
+
+> "The script will download a web page, find all of the links on that page, and recursively collect links on the website by following each of them. Once finished, it will display all the collected links."
+
+This description may seem a bit cluttered at first, so let us break it down more clearly.
+
+The idea is that the script will:
+
+1. Make a request to a web page specified by the user.
+
+2. Look through the content of that page to find any other links (URLs).
+
+3. Store those links.
+
+4. Follow each stored link and repeat the process until there are no new links to follow.
+
+5. Display the list of all discovered URLs once complete.
+
+If this still sounds complex, do not worry—we will clarify everything further as we build and organize our pseudocode.
+
+## Step 2: Writing the Pseudocode
+
+Let us start outlining the process in plain language:
+
+```
+1. The script will make a request to a web page - supplied by the user.
+```
+
+Next, we need to identify and store the links found on that page. To keep things simple, we will parse the page by searching for strings that begin with 'http'. These links will then be stored in a list.
+
+```
+2. The web page requested will be parsed to search for any URLs starting with 'http'.
+3. Each found URL will be stored in a variable.
+```
+
+Now comes the recursive part. The script needs to visit each of these found URLs and repeat the process. However, there is a potential issue: the same URL might appear on multiple pages. To avoid processing the same URL more than once, we will use a dictionary to track which URLs have already been followed.
+
+```
+4. The initial web page will be added to a dictionary with a value of 'yes'.
+5. Each URL in the list variable will be checked against the dictionary:
+    a. If the URL is already in the dictionary with a value of 'yes', it will be skipped.
+    b. If the URL is not in the dictionary, it will be requested, added to the dictionary, and the process will repeat.
+```
+
+## Step 3: Defining the Scope
+
+Control over the web spider is essential. Without limits, the spider might start crawling the entire internet, which we want to avoid.
+
+To manage this, we will limit the scope of the spider to only crawl pages within a specific domain, such as your own test web server. For example, we can restrict the spider to only follow links that match a certain string pattern—like the final octet of the IP address or a specific hostname.
+
+## Final Pseudocode Summary
+
+Putting everything together, here is the final pseudocode plan for our web crawler:
+
+```
+1. The script will make a request to a web page - supplied by the user.
+2. The initial web page will be added to a dictionary with a value of 'yes'.
+3. The web page will be parsed to search for any URLs starting with 'http'.
+4. Each found URL will be stored in a list variable.
+5. For each URL in the list:
+    a. Check if the URL is already in the dictionary.
+        i. If it is, skip it.
+        ii. If it is not, check if it is within the allowed scope.
+            - If it is within scope:
+                * Add the URL to the dictionary with a value of 'yes'.
+                * Request the page and repeat the parsing and storage process.
+6. When no new URLs are left to process, print the list of all unique URLs found, one per line.
+```
