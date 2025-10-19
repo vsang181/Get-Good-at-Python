@@ -198,13 +198,279 @@ Let us execute teh script.
 
 ```
 ~ % ./webSpider.py
+<link href="http://127.0.0.1/css/main.css" rel="stylesheet" type="text/css" />
+    <li><a href="http://127.0.0.1/index.html" class="current">Home</a>
+</li>
 
+    <li><a href="http://127.0.0.1/gettingStarted.html">Getting Started</a>
+</li>
+
+    <li><a href="http://127.0.0.1/techniques.html">Techniques</a></li>
+    <li><a href="http://127.0.0.1/tutorials.html">Painting Tutorials</a></li>
+    <li><a href="http://127.0.0.1/shops.html">Miniature Manufacturers</a>
+
+    <img class="imgRight" src="http://127.0.0.1/images/Crazy_Gaming_Table.jpg"
+    alt="Crazy Tabletop Game Setup!" caption="This is way more than I have ever seen, but
+    this is a wargamer's dream!" width="200px" height="150px">
+    <!-- Image taken from:
+    https://c2.staticflickr.com/4/3044/2775801876_f168dfcb66_b.jpg -->
+</li>
+
+    <li><a href="http://127.0.0.1/gettingStarted.html">Getting Started</a>
+</li>
+
+    <li><a href="http://127.0.0.1/techniques.html">Techniques</a></li>
+    <li><a href="http://127.0.0.1/tutorials.html">Painting Tutorials</a></li>
+    <li><a href="http://127.0.0.1/shops.html">Miniature Manufacturers</a>
+
+    <img class="imgRight" src="http://127.0.0.1/images/Painter-Tux-Beret-Art-
+    Artist-Brush-Blotch-Colour-161318.png" width="40px" height="37px" alt="Shhhh... It's a
+    secret.">
+    <!-- Image taken from:  http://maxpixel.freegreatpicture.com/Painter-Tux-Beret-Art-
+    Artist-Brush-Blotch-Colour-161318 -->
 ```
 
+IN THE OUTPUT, THERE ARE LINKS THAT DO NOT CONTAIN THE IP ADDRESS OF OUr host. Let us filter this further with a nested if statement.
 
+```
+for line in page.text.split("\n"):
+  if "http" in line:
+      if "127.0.0.1" in line:
+          print(line)
+```
 
+Let us execute the script again to check if the output changes.
 
+```
+~ % ./webSpider.py
+    <link href="http://127.0.0.1/css/main.css" rel="stylesheet" type="text/css" />
+        <li><a href="http://127.0.0.1/index.html" class="current">Home</a>
+</li>
 
+        <li><a href="http://127.0.0.1/gettingStarted.html">Getting Started</a>
+</li>
+
+        <li><a href="http://127.0.0.1/techniques.html">Techniques</a></li>
+        <li><a href="http://127.0.0.1/tutorials.html">Painting Tutorials</a></li>
+        <li><a href="http://127.0.0.1/shops.html">Miniature Manufacturers</a>
+</li>
+
+    <img class="imgRight" src="http://127.0.0.1/images/Crazy_Gaming_Table.jpg"
+    alt="Crazy Tabletop Game Setup!" caption="This is way more than I have ever seen, but
+    this is a wargamer's dream!" width="200px" height="150px">
+        <li><a href="http://127.0.0.1/gettingStarted.html">Getting Started</a>
+</li>
+
+        <li><a href="http://127.0.0.1/techniques.html">Techniques</a></li>
+        <li><a href="http://127.0.0.1/tutorials.html">Painting Tutorials</a></li>
+        <li><a href="http://127.0.0.1/shops.html">Miniature Manufacturers</a>
+</li>
+
+    <img class="imgRight" src="http://127.0.0.1/images/Painter-Tux-Beret-Art-
+    Artist-Brush-Blotch-Colour-161318.png" width="40px" height="37px" alt="Shhhh... It's a
+    secret.">
+```
+
+Instead of printing the line to the terminal, we need to filter out the links. We will do this with a start and end index to get the URL of each line and print that to the terminal. Let us do this the same way as covered in teh Strings and Slicing section of this Module.
+
+```
+start = "http"
+end = "\">"
+for line in page.text.split("\n"):
+    if "http" in line:
+        if "127.0.0.1" in line:
+            print(;ine[line.index(start):line.index(end)])
+```
+
+Let us execute teh script and find out if we were able to parse the links correctly.
+
+```
+~ % ./webSpider.py
+Traceback (most recent call last):
+  File "/Users/victorsangwan/./webspider.py", line 20, in <module>
+    print(;ine[line.index(start):line.index(end)])
+ValueError: substring not found
+```
+
+The script failed to execute. The error message indicates that there is an issue with the substring, so our parsing did not work as intended. let us debug this issue to revioew what is going on. To start, let us print the index values for the start and the end conditions.
+
+```
+start = "http"
+end = "\">"
+for line in page.text.split("\n"):
+    if "http" in line:
+        if "127.0.0.1" in line:
+            print(line)
+            print(line.index(start))
+            print(line.index(stop))
+            #print(line[line.index(start):line.index(end)])
+```
+
+Let us execute the script again.
+
+```
+~ % ./webSpider.py
+    <link href="http://127.0.0.1/css/main.css" rel="stylesheet" type="text/css" />
+16
+Traceback (most recent call last):
+  File "/Users/victorsangwan/./webspider.py", line 22, in <module>
+    print(line.index(end))
+ValueError: substring not found
+```
+
+The script failed again. The line and the start index were printed on the terminal, which wouild indicate that the end index is the issue. let us reveiw the link lines again. To save time, only two lines will be shown in the following listing.
+
+```
+<link href="http://127.0.0.1/css/main.css" rel="stylesheet" type="text/css" />
+    <li><a ref="http://127.0.0.1/css/main.css" class="current">Home</a>
+</li>
+```
+
+In the example listing above, the URL links have a different ending condition, With this we can not create an index condition of "">" for all lines. instead, The first line shown above ends the URL link wiuth a "" " condition. Let us write up a short if/else statement to check for the potential ending condition and set the end varaible to the found condition.
+
+```
+start = "http"
+for line in page.text.split(\n""):
+    if "http" in line:
+        if "127.0.0.1" in line:
+            if "\">" in line:
+                end = "\">"
+            else:
+                end = "\" "
+            print(line)
+            print(line.index(start))
+            print(line.index(end))
+            #print(line[line.index(start):line.index(end)])
+```
+
+let us execute the script again to analyse the different in output.
+
+```
+~ % ./webSpider.py
+    <link href="http://127.0.0.1/css/main.css" rel="stylesheet" type="text/css" />
+16
+50
+        <li><a ref="http://127.0.0.1/css/main.css" class="current">Home</a>
+</li>
+25
+73
+```
+
+There is a lot of terminal output with the method we used to debug. Let us cut all the debugging statements and print the new URL values to find out the slicing is workibng as expected.
+
+```
+start = "http"
+for line in page.text.split("\n"):
+    if "http" in line:
+        if "127.0.0.1" in lines:
+            if "\">" in line:
+                end = "\">"
+            else:
+                end = "\" "
+            print(line[line.index(start):line.index(end)])
+```
+
+Let is execute the script to find the URL results.
+
+```
+~ % ./webSpider.py
+http://127.0.0.1/css/main.css
+http://127.0.0.1/index.html" class="current
+http://127.0.0.1/gettingStarted.html
+http://127.0.0.1/techniques.html
+http://127.0.0.1/tutorials.html
+http://127.0.0.1/shops.html
+http://127.0.0.1/images/Crazy_Gaming_Table.jpg" alt="Crazy Tabletop Game Setup!" caption="This is way more than I have ever seen, but this is a wargamer's dream!" width="200px" height="150px
+http://127.0.0.1/gettingStarted.html
+http://127.0.0.1/techniques.html
+http://127.0.0.1/tutorials.html
+http://127.0.0.1/shops.html
+http://127.0.0.1/images/Painter-Tux-Beret-Art-Artist-Brush-Blotch-Colour-161318.png" width="40px" height="37px" alt="Shhh... It's a secret.
+```
+
+So close! There are many URL lines that are correctly sliced, but there are a few lines that have extra HTML data in them. Let us set this to a varaibale and run an additional test on the varaible to determine if there are any quotes (") in the line. If tehre are, we can slice the line again with the end varaibale set to """.
+
+```
+start = "http"
+for line in page.text.split("\n"):
+    if "http" in line:
+        if "127.0.0.1" in lines:
+            if "\">" in line:
+                end = "\">"
+            else:
+                end = "\" "
+            slices = line[line.index(start):line.index(end)]
+            if "\"" in sliced:
+                end = "\""
+                print(sliced[slices.index(start):line.index(end)])
+            else:
+                print(sliced)
+```
+
+If the sliced varaiable has quotes (") in it, it will be sliced an additional time with a new end condition for the index. Otherwise, the program will assume the line was fine and print the sliced varaible without modification.
+
+```
+~ % ./webSpider.py
+http://127.0.0.1/css/main.css
+http://127.0.0.1/index.html
+http://127.0.0.1/gettingStarted.html
+http://127.0.0.1/techniques.html
+http://127.0.0.1/tutorials.html
+http://127.0.0.1/shops.html
+http://127.0.0.1/images/Crazy_Gaming_Table.jpg
+http://127.0.0.1/gettingStarted.html
+http://127.0.0.1/techniques.html
+http://127.0.0.1/tutorials.html
+http://127.0.0.1/shops.html
+http://127.0.0.1/images/Painter-Tux-Beret-Art-Artist-Brush-Blotch-Colour-161318.png
+```
+
+The output of the parsing algorithm we set appears to be working now. Now that we have the expected output, we need to refer to the urlList and add the link if it is not in the list already. To do this, let us take a moment away from this section of the code and add a custom funcation at the top of our script called checkUrlList. This fucnation will take a parameter and loop through the urlList list varaible to check if it exists or not. It wil then return true or False based on the search result.
+
+```
+def checkUrlList(URL):
+    if URL in urlList:
+        return true
+    else:
+        return false
+```
+
+As we have been doing, let us add debig print funcations to test the funcation. Let us do this after our first URL is added to the urlList list. We will add one print statement that should result in a "True" return and another that should result in a "False" return.
+
+```
+urlList.append(URL)
+print(checkUrlList(URL))
+print(checkUrlList("http://127.0.0.1/"))
+```
+
+Let us execute the script and find out what each debugging statement returns.
+
+```
+~ % ./webSpider.py
+True
+False
+```
+
+Now that we validated the checkUrlList funcation, let us incorporate it in the http parsing section. If the link is found in the urlList, it will be ignored. If it is not on the list, it will be added.
+
+We can remove all the debugging print() functions from the code as well. Instead of the print funcations, let us set the sliced value to a different variable called parsedURL. For the sake of brevity, we will also add the debugging print statement outside of the loop to analyse if the sliced URLs were added to the urlList variable.
+
+```
+start = "http"
+for line in page.text.split("\n"):
+    if "http" in line:
+        if "127.0.0.1" in lines:
+            if "\">" in line:
+                end = "\">"
+            else:
+                end = "\" "
+            slices = line[line.index(start):line.index(end)]
+            if "\"" in sliced:
+                end = "\""
+                print(sliced[slices.index(start):line.index(end)])
+            else:
+                print(sliced)
+```
 
 
 
