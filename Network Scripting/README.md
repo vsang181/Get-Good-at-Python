@@ -2,8 +2,8 @@
 
 In this module we cover the following learning units:
 
-- Write a client program with Python — Part I
-- Write a client program with Python — Part II
+- [Write a client program with Python — Part I](https://github.com/vsang181/Get-Good-at-Python/tree/main/Network%20Scripting/Write%20a%20client%20program%20with%20Python%20%E2%80%94%20Part%20I)
+- [Write a client program with Python — Part II](https://github.com/vsang181/Get-Good-at-Python/tree/main/Network%20Scripting/Write%20a%20client%20program%20with%20Python%20%E2%80%94%20Part%20II)
 - Write a server program with Python
 - Write a port scanner with Python
 - Website interaction with Python — Part I
