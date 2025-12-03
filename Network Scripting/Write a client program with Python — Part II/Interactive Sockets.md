@@ -1,7 +1,8 @@
 # Interactive Sockets
 
-Sometimes we may want to establish a connection with a server and then send it data based on the information it provides us. To do this, we can create an Interactive Socket with the `telnetlib` library. Let us begin with our original script and import `telnetlib`.
+In many situations, we may want to establish a connection to a server and then continue communicating with it based on what the server sends back to us. Rather than connecting, receiving a single message, and closing the connection, we can maintain an interactive session. To achieve this behaviour, we can use Python’s `telnetlib` module, which provides an implementation of the Telnet protocol and includes built-in functionality for interactive communication.
 
+Let us begin by reviewing our original client script and preparing it for modification.
 ```
 ~ % cat basic_client.py 
 #!/usr/bin/python3
@@ -19,7 +20,9 @@ cleint.close()
 print (msg.decode(`ascii`))
 ```
 
-The `telnetlib` module allows for an implementation of the Telnet protocol. We will be modifying our script to make use of the `telnetlib.interact()` method, which will allow us to interact with the server dynamically. To implement this method, we will create a function that we will call after our client has connected to the server.
+To introduce interactivity, we will import the `telnetlib` module and use its `interact()` method. This method enables a live, two-way communication loop between our client and the server. It continuously listens for incoming data and sends outgoing data until the connection closes.
+
+We will begin by writing a wrapper function that will set up the Telnet object and initiate the interactive session.
 
 ```
 ~ % cat basic_client.py 
@@ -43,11 +46,13 @@ print (msg.decode(`ascii`))
 cleint.close()
 ```
 
-Notice that the function we have created is named `interact`. The name of the Telnet method is also `interact`! This is not essential—we could call our function anything we wish. However, it is a good reminder that we should always understand the scope of different code blocks so that we do not become confused.
+A few details to notice:
 
-The mechanism that allows this client to maintain interactivity with the server is handled entirely through Telnet’s own `interact` function. This function sets up a `while True` loop that continuously reads and writes data. Since `True` is always true, it continues to read and write data from and to the server until the connection is closed.
+- The name of our wrapper function is `interact`, but it is distinct from `telnetlib`’s `interact()` method. This is perfectly acceptable because each name exists in its own scope.
+- Inside the function, we create a Telnet object, assign our socket to it, and then invoke the built-in `interact()` method.
+- The Telnet `interact()` method internally uses a `while True` loop to continuously read from and write to the socket, allowing the client to remain active for as long as the server keeps the connection open.
 
-Next, we will call our new function after we connect to the server.
+Next, we will call our new function after establishing the connection and receiving the server’s initial message.
 
 ```
 ~ % cat basic_client.py 
@@ -72,8 +77,9 @@ interact(client)
 cleint.close()
 ```
 
-In the above listing, our client code is now capable of interacting dynamically with the server it connects to. Note that this functionality depends on two things:
+With these changes, our client is now capable of entering an interactive session after receiving the server’s initial response. This means:
 
-1. The server must allow the connection to stay open. If it closes the connection, our client will not be able to send any further data.
+1. **The connection must remain open** — If the server closes the connection immediately after sending data, the client will not be able to continue interacting.
+2. **The server must accept and handle additional input** — An interactive client is only useful if the server is designed to respond to whatever the user sends next.
 
-2. The server must be configured to receive the data we send to it. Since we have not yet implemented our own server, you can try the above client code against the remote VM in the following exercise.
+Since we have not yet implemented our own interactive server, you will test this behaviour using the remote VM provided in the next exercise.
