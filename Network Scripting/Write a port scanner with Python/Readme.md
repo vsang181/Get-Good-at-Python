@@ -5,6 +5,6 @@ In this module, we will build on our understanding of sockets and client–serve
 This module covers the following:
 
 1. Using the `socket` module to create a basic port scanner
-2. Introducing the concept of port knocking and how it can be implemented in Python
+2. Port Knocking
 
 We will start by writing a straightforward TCP port scanner and then expand our knowledge to explore how a sequence of connection attempts can be used as a form of lightweight authentication via port knocking.
