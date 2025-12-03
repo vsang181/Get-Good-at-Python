@@ -2,7 +2,7 @@
 
 This module covers the following learning objectives:
 
-1. Understanding the Transport Layer: Using the Python `socket` Module with HTTP
+1. [Understanding the Transport Layer: Using the Python `socket` Module with HTTP](https://github.com/vsang181/Get-Good-at-Python/blob/main/Network%20Scripting/Website%20interaction%20with%20Python%20%E2%80%94%20Part%20I/Understanding%20the%20Transport%20Layer%3A%20Using%20the%20Python%20socket%20Module%20with%20HTTP.md)
 2. Working at the Application Layer: Making HTTP GET Requests with Python
 3. Parsing HTML Content Programmatically
 
