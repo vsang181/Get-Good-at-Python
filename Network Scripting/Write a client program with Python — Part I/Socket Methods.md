@@ -1,10 +1,16 @@
 # Socket Methods
 
-The most common type of socket applications are client–server applications, such as the one we are currently building. This involves a client making a request to the server, and the client then receives a response from the server.
+Most networking applications follow a client–server model, where a client initiates communication and a server listens for incoming requests. Our current project follows this same pattern: we are building a client that will reach out to a server, establish a connection, and receive a response. To achieve this, we must understand several fundamental socket methods that Python provides through its built-in `socket` module.
 
-The socket module comes with various methods to facilitate the different actions a client (or a server) will perform during such communication. There are three sets of socket methods that we need to be aware of: client socket methods, server socket methods, and general socket methods. Usually, though not always, a client will invoke client socket methods, a server will invoke server socket methods, and both programs can make use of the general socket methods.
+The `socket` module contains three main categories of methods:
 
-The `socket.gethostname()` method returns the name of the current system. We will be using it in our scripts to test execution on our local machine. This means that if we want to run our scripts against an external server, we will need to specify the IP address of the remote target.
+1. **Client socket methods** — generally used by the connecting side
+2. **Server socket methods** — used by the listening side
+3. **General socket methods** — used by both clients and servers
+
+Although these distinctions exist, it is important to note that certain methods can be used by either side depending on the needs of the program.
+
+One useful general method is s`ocket.gethostname()`. This method returns the hostname of the machine on which the script is running. Throughout this module, we will rely on this method when testing our programs locally. When you later run your client against a remote system, you will simply replace the hostname with the server’s IP address.
 
 ```
 ~ % cat basic_client.py 
@@ -17,9 +23,9 @@ host = socket.gethostname()
 port = 808
 ```
 
-In the above listing, we specify our own local host with the `socket.gethostname()` method and then specify the port we want to connect on as an integer.
+In this example, we created a TCP socket using IPv4 (`AF_INET` and `SOCK_STREAM`), retrieved our local hostname, and specified port `808` as our connection target.
 
-The `socket.connect(address)` method is used to initiate a connection with the server. The method requires that we specify a single host and port to connect to, which we defined in the `host` and `port` variables.
+To initiate a connection to the server, we use the `socket.connect(address)` method. This method expects a single argument, which must be a tuple consisting of `(host, port)`.
 
 ```
 ~ % cat basic_client.py 
@@ -34,11 +40,11 @@ port = 808
 soc.connect((host, port))
 ```
 
-Notice the double parentheses within the `soc.connect((host, port))` syntax. The reason for this is because the socket module treats `(host, port)` as a single argument. If we include only one pair of parentheses, Python would interpret our syntax as attempting to provide two arguments to a method that accepts only one.
+Notice the double parentheses in `soc.connect((host, port))`. This is intentional.
+If we use only one pair of parentheses, Python would incorrectly interpret the host and port as separate arguments, causing an error. By wrapping them in an additional set of parentheses, we pass the required tuple as a single argument.
 
-Now that we understand how to use the `socket.connect` method, there are some general socket methods that we need to become familiar with so our client can receive data and terminate properly.
+Once the connection is established, we can receive data from the server using the `socket.recv(bufsize)` method. This method accepts a buffer size that determines how many bytes can be read from the server at one time.
 
-The `socket.recv(bufsize)` method allows the client to receive a TCP message from the socket. The `bufsize` (buffer size) argument defines the maximum amount of data that the method can receive at any one time.
 ```
 ~ % cat basic_client.py 
 #!/usr/bin/python3
@@ -55,20 +61,20 @@ msg = soc.recv(1024)
 print(msg.decode('ascii'))
 ```
 
-In the above listing, a client would connect to a server and then print out any data it receives from the server via the `socket.recv()` method.
+Here, the client connects to the server, then waits to receive up to 1024 bytes of data. The response is stored in the variable `msg`, decoded from ASCII, and printed to the console.
 
-We now have enough code to connect to a server.
+At this stage, your client is complete enough to establish a connection—assuming there is a server actively listening on the same machine at port 808. If you are following along, you will soon create the server in a later module.
 
-> If you are following along, you will not yet have the server code to test your client. For now, simply ensure that the client code you have written is identical to the code above.
+Example output may resemble the following:
 
 ```
 ~ % ./basic_client.py 
 Connection Established
 ```
 
-In the above listing, we execute our client against a server running on our own localhost and receive a message from the server that the connection has been established.
+This indicates that the client successfully connected and received a message from the server.
 
-The `socket.close()` method is straightforward, as it will simply close the socket. This can be invoked from either end and will terminate the connection between the client and the server.
+To gracefully terminate the connection, we use the `socket.close()` method. This ensures the socket is properly shut down, freeing system resources and closing the communication channel.
 
 ```
 ~ % cat basic_client.py 
@@ -87,4 +93,12 @@ soc.close()
 print(msg.decode('ascii'))
 ```
 
-We have now built a fully functioning client program in Python. Our script is designed to connect to a local server that is running on port 808. The `socket.connect()` method will establish the connection. If the connection is successful, the client will receive a message from the server using `socket.recv()`. The `socket.close()` method will close the client, and finally the `print` function will decode and display the message from the server.
+With this, we have a fully functional Python client. It:
+
+1. Creates a TCP socket
+2. Connects to a server on the specified host and port
+3. Receives a message
+4. Closes the connection
+5. Outputs the server’s response to the terminal
+
+This foundation prepares us to continue building more advanced networking tools, beginning with server-side code in the next section.
