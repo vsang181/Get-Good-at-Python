@@ -1,0 +1,9 @@
+# Port Knocking
+
+Port knocking is a technique that allows external users to open a protected or gated port on a machine by first attempting to connect to a predetermined sequence of other ports in a specific order. You can think of it like entering a PIN code on a mobile device: if the correct numbers are pressed in the correct sequence, the device unlocks. Likewise, if a system’s firewall has been configured to recognise a particular series of connection attempts—knocks—on specific ports, it will open the gated port to the user.
+
+A properly implemented port knocking mechanism can introduce an additional, although modest, layer of security. Its primary benefit is that it helps conceal services from casual scanning. For example, the port scanner we built earlier performs a predictable loop through port numbers. It is extremely unlikely that such an automated scan would accidentally “knock” on the correct ports in the correct sequence. Therefore, an attacker would need prior, precise knowledge of the system’s port knocking configuration before being able to access the protected service.
+
+Port knocking rules can be made arbitrarily complex, requiring the user to know a longer or more unusual sequence of ports. This increases the difficulty for an external user to discover or brute-force the correct pattern.
+
+However, it is important to note that port knocking is not a stand-alone security solution. It relies on security through obscurity, meaning that the security is derived from hiding information rather than enforcing strong authentication. This makes it comparable to single-factor authentication, where the only “credential” required is knowledge of the correct port sequence. Because of this limitation, port knocking should only be used as an additional protective measure rather than a replacement for proper authentication and access controls.
