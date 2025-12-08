@@ -8,7 +8,7 @@ This module covers the following learning objectives:
 
 1. [Introduction to Scapy](https://github.com/vsang181/Get-Good-at-Python/blob/main/Network%20Scripting/Capture%20and%20send%20packets%20with%20Scapy/Introduction%20to%20Scapy.md)
 2. [Scapy Commands](https://github.com/vsang181/Get-Good-at-Python/blob/main/Network%20Scripting/Capture%20and%20send%20packets%20with%20Scapy/Scapy%20Commands.md)
-3. Capturing Packets with Scapy
+3. [Capturing Packets with Scapy](https://github.com/vsang181/Get-Good-at-Python/blob/main/Network%20Scripting/Capture%20and%20send%20packets%20with%20Scapy/Capturing%20Packets%20with%20Scapy.md)
 4. Saving Packets with Scapy
 5. Methods for Sending and Receiving Packets with Scapy
 6. Sending a Packet with Scapy
