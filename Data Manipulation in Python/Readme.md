@@ -2,7 +2,7 @@
 
 In this topic, we will cover the following learning units:
 
-- Python data Basics
+- [Python Data Basics](https://github.com/vsang181/Get-Good-at-Python/tree/main/Data%20Manipulation%20in%20Python/Python%20Data%20Basics)
 - Sets, Lists and Dictionaries
 - Different Base representations
 - Converting and Displaying Data Types
