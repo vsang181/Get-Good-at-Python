@@ -5,7 +5,7 @@ In any computer system, the lowest-level representations of data—bits and byte
 In this Learning Unit, we will refresh our understanding of Python’s core data types and how to work with them effectively. Specifically, we will cover the following learning objectives:
 
 - [Working with Strings](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/Python%20Data%20Basics/Working%20with%20Strings.md)
-- Working with Integers
+- [Working with Integers](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/Python%20Data%20Basics/Working%20with%20Integer.md)
 - Working with Floating-Point Numbers
 - Exploring Complex Numbers
 - Working with Booleans
