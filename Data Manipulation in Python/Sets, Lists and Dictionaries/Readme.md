@@ -4,7 +4,7 @@ In this unit, we will explore **sets**, **lists**, and **dictionaries**—three 
 
 This unit will cover the following learning objectives:
 
-- Manipulating **Sets**
+- [Manipulating **Sets**](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/Sets%2C%20Lists%20and%20Dictionaries/Manipulating%20Sets.md)
 - Working with **Lists**
 - Exploring **Tuples**
 - Using **Dictionaries**
