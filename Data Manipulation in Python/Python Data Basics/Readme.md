@@ -8,7 +8,7 @@ In this Learning Unit, we will refresh our understanding of Python’s core data
 - [Working with Integers](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/Python%20Data%20Basics/Working%20with%20Integer.md)
 - [Working with Floating-Point Numbers](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/Python%20Data%20Basics/Working%20with%20Floating-Point%20Numbers.md)
 - [Exploring Complex Numbers](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/Python%20Data%20Basics/Exploring%20Complex%20Numbers.md)
-- Working with Booleans
+- [Working with Booleans](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/Python%20Data%20Basics/Working%20with%20Booleans.md)
 - Understanding Python Bytes
 
 For this topic, we will primarily make use of Python’s interactive console. You can start the interpreter with the following command:
