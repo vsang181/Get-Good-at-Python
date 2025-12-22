@@ -6,7 +6,7 @@ This unit will cover the following learning objectives:
 
 - [Manipulating **Sets**](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/Sets%2C%20Lists%20and%20Dictionaries/Manipulating%20Sets.md)
 - [Working with **Lists**](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/Sets%2C%20Lists%20and%20Dictionaries/Working%20with%20Lists.md)
-- Exploring **Tuples**
+- [Exploring **Tuples**](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/Sets%2C%20Lists%20and%20Dictionaries/Exploring%20Tuples.md)
 - Using **Dictionaries**
 
 Each of these structures serves a different purpose, offers unique capabilities, and is suited to particular use-cases. We will examine their syntax, behaviour, and common operations, while highlighting how penetration testers and Python programmers can use them effectively.
