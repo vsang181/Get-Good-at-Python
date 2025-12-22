@@ -2,7 +2,7 @@
 
 In this unit we will cover the following learning objectives:
 
-- Manipulating Binary Values
+- [Manipulating Binary Values](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/Different%20Base%20representations/Manipulating%20Binary%20Values.md)
 - Octal Numbers
 - Hexadecimal Numbers
 
