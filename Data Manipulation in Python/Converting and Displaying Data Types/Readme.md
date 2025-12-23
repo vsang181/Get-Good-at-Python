@@ -2,7 +2,7 @@
 
 In this unit, we will cover the following learning objectives:
 
-- Introducing Conversions
+- [Introducing Conversions](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/Converting%20and%20Displaying%20Data%20Types/Introducing%20Conversions.md)
 - Converting Integers
 - Converting Bytes
 - Converting Characters
