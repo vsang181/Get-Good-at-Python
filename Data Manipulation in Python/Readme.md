@@ -5,7 +5,7 @@ In this topic, we will cover the following learning units:
 - [Python Data Basics](https://github.com/vsang181/Get-Good-at-Python/tree/main/Data%20Manipulation%20in%20Python/Python%20Data%20Basics)
 - [Sets, Lists and Dictionaries](https://github.com/vsang181/Get-Good-at-Python/tree/main/Data%20Manipulation%20in%20Python/Sets%2C%20Lists%20and%20Dictionaries)
 - [Different Base representations](https://github.com/vsang181/Get-Good-at-Python/tree/main/Data%20Manipulation%20in%20Python/Different%20Base%20representations)
-- Converting and Displaying Data Types
+- [Converting and Displaying Data Types](https://github.com/vsang181/Get-Good-at-Python/tree/main/Data%20Manipulation%20in%20Python/Converting%20and%20Displaying%20Data%20Types)
 - Manipulating Binary large Objects in Python
 - User-Defined Data Structures
 - Data Structures as records
