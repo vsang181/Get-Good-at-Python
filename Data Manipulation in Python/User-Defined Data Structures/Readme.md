@@ -3,7 +3,7 @@
 In this unit, we will cover the following:
 
 - [Building stacks of data](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/User-Defined%20Data%20Structures/Building%20stacks%20of%20data.md)
-- Doubling up on our lists
+- [Doubling up on our lists](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/User-Defined%20Data%20Structures/Doubling%20up%20on%20our%20lists.md)
 - Creating graph structures
 - Growing trees in Python
 - Working with FIFO queues
