@@ -2,9 +2,9 @@
 
 In this unit we will cover the following learning objectives:
 
-- [Manipulating Binary Values](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/Different%20Base%20representations/Manipulating%20Binary%20Values.md)
-- [Octal Numbers](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/Different%20Base%20representations/Octal%20Numbers.md)
-- [Hexadecimal Numbers](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/Different%20Base%20representations/Hexadecimal%20Numbers.md)
+1. [Manipulating Binary Values](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/Different%20Base%20representations/Manipulating%20Binary%20Values.md)
+2. [Octal Numbers](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/Different%20Base%20representations/Octal%20Numbers.md)
+3. [Hexadecimal Numbers](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/Different%20Base%20representations/Hexadecimal%20Numbers.md)
 
 Although we typically use **decimal integers** in Python, there are several alternative ways to represent integer values. The three most commonly used alternative bases are:
 
