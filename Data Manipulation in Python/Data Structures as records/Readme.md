@@ -4,7 +4,7 @@ In this unit, we will cover three key objectives related to organising and stori
 
 - [Working with Data Records](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/Data%20Structures%20as%20records/Working%20with%20Data%20Records.md)
 - [Working with Databases](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/Data%20Structures%20as%20records/Working%20with%20Databases.md)
-- Working with JSON and XML
+- [Working with JSON and XML](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/Data%20Structures%20as%20records/Working%20with%20JSON%20and%20XML.md)
 
 Each of these topics focuses on representing and managing structured information—whether in-memory using Python data structures, in persistent storage through databases, or in platform-independent formats such as JSON and XML.
 
