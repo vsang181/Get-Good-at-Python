@@ -2,13 +2,13 @@
 
 This module cover the following topics:
 
-- [Variables, Slicing and Type Casting](https://github.com/vsang181/Get-Good-at-Python/tree/main/Python%20Scripting%20Basics/Variables%2C%20Slicing%20and%20Type%20Casting)
-- [Lists and Dictionaries](https://github.com/vsang181/Get-Good-at-Python/tree/main/Python%20Scripting%20Basics/Lists%20and%20Dictionaries)
-- [Loops, Logic and User Input](https://github.com/vsang181/Get-Good-at-Python/tree/main/Python%20Scripting%20Basics/Loops%2C%20Logic%20and%20User%20Input)
-- [Files and Functions](https://github.com/vsang181/Get-Good-at-Python/tree/main/Python%20Scripting%20Basics/Files%20and%20Functions)
-- [Modules and Web Requests](https://github.com/vsang181/Get-Good-at-Python/tree/main/Python%20Scripting%20Basics/Modules%20and%20Web%20Requests)
-- [Python Network Sockets](https://github.com/vsang181/Get-Good-at-Python/tree/main/Python%20Scripting%20Basics/Python%20Network%20Sockets)
-- [Putting It All Together](https://github.com/vsang181/Get-Good-at-Python/tree/main/Python%20Scripting%20Basics/Putting%20It%20All%20Together)
+1. [Variables, Slicing and Type Casting](https://github.com/vsang181/Get-Good-at-Python/tree/main/Python%20Scripting%20Basics/Variables%2C%20Slicing%20and%20Type%20Casting)
+2. [Lists and Dictionaries](https://github.com/vsang181/Get-Good-at-Python/tree/main/Python%20Scripting%20Basics/Lists%20and%20Dictionaries)
+3. [Loops, Logic and User Input](https://github.com/vsang181/Get-Good-at-Python/tree/main/Python%20Scripting%20Basics/Loops%2C%20Logic%20and%20User%20Input)
+4. [Files and Functions](https://github.com/vsang181/Get-Good-at-Python/tree/main/Python%20Scripting%20Basics/Files%20and%20Functions)
+5. [Modules and Web Requests](https://github.com/vsang181/Get-Good-at-Python/tree/main/Python%20Scripting%20Basics/Modules%20and%20Web%20Requests)
+6. [Python Network Sockets](https://github.com/vsang181/Get-Good-at-Python/tree/main/Python%20Scripting%20Basics/Python%20Network%20Sockets)
+7. [Putting It All Together](https://github.com/vsang181/Get-Good-at-Python/tree/main/Python%20Scripting%20Basics/Putting%20It%20All%20Together)
 
 Scripting refers to the practice of writing short programmes—to efficiently automate repetitive or routine tasks. It is particularly valuable in large-scale environments where manual execution would be both time-consuming and prone to error. For instance, within an enterprise network, administrators may be required to apply configuration changes, deploy software updates, or retrieve logs across hundreds of machines. Performing these actions manually would not only be a laborious and inefficient use of time but could also introduce inconsistencies. Scripting enables these tasks to be executed rapidly, reliably, and with minimal human intervention, thereby improving operational efficiency and reducing the risk of error.
 
