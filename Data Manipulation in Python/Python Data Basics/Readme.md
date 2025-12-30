@@ -4,12 +4,12 @@ In any computer system, the lowest-level representations of data—bits and byte
 
 In this Learning Unit, we will refresh our understanding of Python’s core data types and how to work with them effectively. Specifically, we will cover the following learning objectives:
 
-- [Working with Strings](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/Python%20Data%20Basics/Working%20with%20Strings.md)
-- [Working with Integers](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/Python%20Data%20Basics/Working%20with%20Integer.md)
-- [Working with Floating-Point Numbers](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/Python%20Data%20Basics/Working%20with%20Floating-Point%20Numbers.md)
-- [Exploring Complex Numbers](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/Python%20Data%20Basics/Exploring%20Complex%20Numbers.md)
-- [Working with Booleans](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/Python%20Data%20Basics/Working%20with%20Booleans.md)
-- [Understanding Python Bytes](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/Python%20Data%20Basics/Understanding%20Python%20Bytes.md)
+1. [Working with Strings](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/Python%20Data%20Basics/Working%20with%20Strings.md)
+2. [Working with Integers](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/Python%20Data%20Basics/Working%20with%20Integer.md)
+3. [Working with Floating-Point Numbers](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/Python%20Data%20Basics/Working%20with%20Floating-Point%20Numbers.md)
+4. [Exploring Complex Numbers](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/Python%20Data%20Basics/Exploring%20Complex%20Numbers.md)
+5. [Working with Booleans](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/Python%20Data%20Basics/Working%20with%20Booleans.md)
+6. [Understanding Python Bytes](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/Python%20Data%20Basics/Understanding%20Python%20Bytes.md)
 
 For this topic, we will primarily make use of Python’s interactive console. You can start the interpreter with the following command:
 
