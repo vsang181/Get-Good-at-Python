@@ -2,11 +2,11 @@
 
 In this unit, we will cover the following:
 
-- [Building stacks of data](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/User-Defined%20Data%20Structures/Building%20stacks%20of%20data.md)
-- [Doubling up on our lists](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/User-Defined%20Data%20Structures/Doubling%20up%20on%20our%20lists.md)
-- [Creating graph structures](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/User-Defined%20Data%20Structures/Creating%20graph%20structures.md)
-- [Growing trees in Python](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/User-Defined%20Data%20Structures/Growing%20trees%20in%20Python.md)
-- [Working with FIFO queues](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/User-Defined%20Data%20Structures/Working%20with%20FIFO%20queues.md)
+1. [Building stacks of data](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/User-Defined%20Data%20Structures/Building%20stacks%20of%20data.md)
+2. [Doubling up on our lists](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/User-Defined%20Data%20Structures/Doubling%20up%20on%20our%20lists.md)
+3. [Creating graph structures](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/User-Defined%20Data%20Structures/Creating%20graph%20structures.md)
+4. [Growing trees in Python](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/User-Defined%20Data%20Structures/Growing%20trees%20in%20Python.md)
+5. [Working with FIFO queues](https://github.com/vsang181/Get-Good-at-Python/blob/main/Data%20Manipulation%20in%20Python/User-Defined%20Data%20Structures/Working%20with%20FIFO%20queues.md)
 
 Python provides many built-in data types and structures such as lists, tuples, sets, and dictionaries. However, when solving more complex problems, we often need to create **custom data structures** that model real-world behaviour such as:
 
